@@ -187,7 +187,7 @@ app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 
 // requiring ejMate ~ helps in creating multiple template for ex navbar
-const ejsMate = require("ejs-Mate")
+const ejsMate = require("ejs-mate")
 app.engine("ejs",ejsMate);
 
 
