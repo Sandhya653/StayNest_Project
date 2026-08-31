@@ -1,0 +1,121 @@
+
+<body>
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><span class="material-symbols-outlined">
+home_and_garden
+</span><b>StayNest</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse "  id="navbarNavAltMarkup">
+       
+        <div class="navbar-nav fw-bold">
+          <a class="nav-link " href="/listings"><b>Explore</b></a>
+        </div>
+        <div class="navbar-nav ms-auto ">
+          
+            <!-- Center Search -->
+            <!-- <form class="d-flex mx-auto search-form" role="search">
+                <input
+                    class="form-control  me-2 search-input"
+                    type="search"
+                    placeholder="Search destinations"
+                    aria-label="Search"
+                />
+
+                <button class="btn   me-2 search-btn btn-outline-primary" type="submit">
+                    Search
+                </button> -->
+            <!-- </form> -->
+             <!-- <form class="d-flex mx-auto search-form" role="search" action="/listings/search" method="GET">
+                <input
+                    class="form-control me-2 search-input"
+                    type="search"
+                    name="destination"
+                    placeholder="Search destinations"
+                    aria-label="Search"
+                />
+
+                <button class="btn me-2 search-btn btn-outline-primary" type="submit">
+                    Search
+                </button>
+            </form> -->
+            <form class="d-flex mx-auto search-form"
+                role="search"
+                action="/listings/search"
+                method="GET">
+
+                <input
+                    class="form-control me-2 search-input"
+                    type="search"
+                    name="destination"
+                    placeholder="Search destinations"
+                    aria-label="Search"
+                />
+
+                <button class="btn me-2 search-btn btn-outline-primary" type="submit">
+                    Search
+                </button>
+            </form>
+<!-- right part -->
+        <div class="navbar-nav ms-auto align-items-lg-center">
+
+           <li class="nav-item">
+
+             <a class="nav-link" href="/listings/new"><b>Add new listings</b></a>
+           </li>
+           
+          <% if(!currUser) { %>
+
+            <a class="nav-link " aria-current="page" href="/signup"><b>Sign-up</b></a>
+            <a class="nav-link " href="/login"><b>Login</b></a>
+          <%}%>
+          <% if(currUser) { %>
+
+            <a class="nav-link " href="/logout"><b>Logout</b></a>
+          <%} %>
+        </div>
+        
+      
+    </div>
+  </div>
+</nav>
+
+<style>
+@media (max-width: 768px) {
+
+    .navbar-collapse {
+        background: #fff !important;
+        opacity: 1 !important;
+        z-index: 1050;
+        padding: 10px 15px 15px;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar-collapse .navbar-nav {
+        background: #fff !important;
+        width: 100%;
+    }
+
+    .navbar-collapse .nav-link {
+        background: #fff !important;
+        color: #222 !important;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+
+    .navbar-collapse .nav-link:hover {
+        background: #f2f2f2 !important;
+    }
+
+    .navbar-collapse .search-form {
+        background: #fff !important;
+        padding: 8px 0;
+    }
+}
+</style>
+
+
+</body>

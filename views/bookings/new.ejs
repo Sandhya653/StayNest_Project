@@ -1,0 +1,64 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <br>
+    <span>
+
+        <h2 class="text-primary">Confirm your booking For</h2>
+        
+        <div class="text-primary">
+            <hr>
+        </div>
+        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><%= listing.title %></p>
+    </span>
+    <p>Amount : ₹ <%= listing.price %> / night</p>
+    
+    <form action="/listings/<%= listing._id %>/bookings" method="POST">
+         <div class="mb-3">
+    
+             <label class="form-label">Check In</label>
+         
+             <input
+                 class="form-control"
+                 type="date"
+                 name="checkIn"
+                 required
+                 class="form-control"
+             >
+         </div>
+    
+         <div class="mb-3">
+    
+             <label class="mt-2" class="form-label">Check Out</label>
+         
+             <input
+                 class="form-control"
+                 type="date"
+                 name="checkOut"
+                 required
+                 class="form-control"
+             >
+         </div>
+    
+          <div class="mb-3">
+    
+              <label class="mt-2" class="form-label">Guests</label>
+          
+              <input
+                  class="form-control"
+                  type="number"
+                  name="guests"
+                  min="1"
+                  value="1"
+                  required
+                  class="form-control"
+              >
+          </div>
+        <!-- <div class="d-grid gap-2"> -->
+
+            <button type="submit" class="btn btn-outline-primary mt-3">
+                Confirm Booking
+            </button>
+        <!-- </div> -->
+    
+    </form>
+</body>

@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <br>
+    <h1 class="col-6 offset-3 text-center">Sign-Up On <span class="material-symbols-outlined">
+home_and_garden
+</span>StayNest</h1>
+        <div class="col-8 offset-2">
+            <form action="/signup" method="post" class="needs-validation" novalidate>
+                <br>
+                <div class="mb-3">
+                    <lable for="username" class="form-label">Username</lable>
+                    <br>
+                    <input name="username"
+                        id="username"
+                        placeholder="Enter the username" 
+                        class="form-control"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    
+                </div>
+                <div class="mb-3">
+                    <lable for="email" class="form-label">Email</lable>
+                    <br>
+                    <input name="email"
+                        id="email"
+                        placeholder="Enter the email" 
+                        class="form-control"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <lable for="password" class="form-label">Password</lable>
+                    <br>
+                    <input name="password"
+                        id="password"
+                        placeholder="Enter the password" 
+                        class="form-control"
+                        required/>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2" type="submit">Sign-Up</button>
+                </div>
+                
+
+            </form>
+        </div>
+</div>

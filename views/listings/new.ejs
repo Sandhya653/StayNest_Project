@@ -1,0 +1,104 @@
+
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <br>
+            <H3>Create a new listing</H3>
+            <br>
+            <form method="POST" action ="/listings" novalidate  class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <lable for="title" class="form-label">Title</lable>
+                    <input name="listing[title]" placeholder="Enter the title" class="form-control" required>
+                    <div class="invalid-feedback">
+                    Please provide title.
+                    </div>
+                    
+                </div>
+            
+                <div class="mb-3" >
+        
+                    <lable for="discreption" class="form-label">Description</lable>
+                    <textarea name="listing[description]" placeholder="Write a short discreption here." class="form-control" required></textarea>
+                    <div class="invalid-feedback">
+                    Please provide a valid description.
+                    </div>
+                   
+                </div>
+
+                <!-- <div class="mb-3">
+                    <lable for="image" class="form-label">Image</lable>
+                    <input name="listing[image][url]" placeholder="please put the image url here." class="form-control" required>
+                    <div class="invalid-feedback">
+                    Please provide an Image.
+                    </div>
+                    
+                </div> -->
+                <div class="mb-3">
+                    <lable for="image" class="form-label">Upload Image</lable>
+                    <input name="listing[image]" type="file" class="form-control" required>
+                    <div class="invalid-feedback">
+                    Please provide an Image.
+                    </div>
+                    
+                </div>
+                <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <lable for="price" class="form-label">Price</lable>
+                            <input name="listing[price]" placeholder="price" type="number" class="form-control" required>
+                            <div class="invalid-feedback">
+                            Please provide a valid Price.
+                            </div>
+                            
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <lable for="location" class="form-label">Location</lable>
+                            <input name="listing[location]" placeholder="Provide location name" class="form-control" required>
+                            <div class="invalid-feedback">
+                            Please provide a valid Location.
+                            </div>
+                            
+                        </div>                   
+                </div>     
+                <div class="mb-3">
+                    <lable for="country" class="form-label">Country</lable>
+                    <input name="listing[country]" placeholder="Provide country name" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                    Please provide a valid country.
+                    </div>
+                    
+                </div>
+                <div>
+                <label for="category" class="form-label">Category</label>
+                <select name="listing[category]" id="category" class="form-select">
+                    <option value="Trending">Trending</option>
+                    <option value="Beach">Beach</option>
+                    <option value="Mountains">Mountains</option>
+                    <option value="City">City</option>
+                    <option value="Arctic">Arctic</option>
+                    <option value="Forest">Forest</option>
+                    <option value="Beachfront">Beachfront</option>
+                    <option value="Pools">Pools</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Apartments">Apartments</option>
+                    <option value="Villas">Villas</option>
+                    <option value="Heritage">Heritage</option>
+                    <option value="PetFriendly">Pet Friendly</option>
+                    <option value="WiFi">Wi-Fi</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Spa">Spa</option>
+                    <option value="Gym">Gym</option>
+                    <option value="HotTub">Hot Tub</option>
+                </select>
+                </div>
+                <br/>
+                <button class="btn btn-outline-primary">Add+</button>
+            </form>
+        </div>
+    </div> 
+    <br> 
+</body>

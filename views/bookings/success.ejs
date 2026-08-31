@@ -1,0 +1,62 @@
+
+<% layout("/layouts/boilerplate") %>
+<body>
+
+    <div class="container mt-5">
+    
+        <h2 class="text-primary">Thank You for your Booking! <i class="fa-solid fa-face-laugh-squint" style="color:rgb(13, 110, 253)"></i></h2>
+        <p style="text-align: justify;" >
+            Your reservation has been confirmed successfully.<br>
+            Thank you for choosing <strong><i>StayNest</i></strong>. 
+            We're excited to host you and hope you have a comfortable 
+            and memorable stay. <br>
+           
+        </p>
+        <p style="font-family: Arial, Helvetica, sans-serif;">
+            Property:
+            <%= listing.title %>
+        </p>
+    
+        <p style="font-family: Arial, Helvetica, sans-serif;">
+            Check In:
+            <%= booking.checkIn.toDateString() %>
+        </p>
+    
+        <p style="font-family: Arial, Helvetica, sans-serif;">
+            Check Out:
+            <%= booking.checkOut.toDateString() %>
+        </p>
+    
+        <p style="font-family: Arial, Helvetica, sans-serif;">
+            Guests:
+            <%= booking.guests %>
+        </p>
+    
+        <h4>
+            Total:
+            ₹ <%= booking.totalPrice %>
+        </h4>
+        <p style="text-align: justify;">
+            A confirmation of your booking
+            details has been saved, and you can now return to
+            the listing or continue exploring more amazing 
+            places.<br>
+            <strong>
+                <i>
+
+                    We look forward to welcoming you!
+                    <i class="fa-solid fa-handshake" style="color: rgb(13, 110, 253)"></i>
+                </i>
+            </strong>
+        </p>
+        <div>
+            <a
+                href="/listings/<%= listing._id %>"
+                class="btn btn-primary"
+            >
+                Back to Listing
+            </a>
+        </div>
+    
+    </div>
+</body>
